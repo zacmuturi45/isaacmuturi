@@ -1,0 +1,178 @@
+.inner {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    .slide {
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .header {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+
+        .c {
+            height: 19px;
+            width: 19px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+            transform: scale(0.9);
+            margin-top: 3px;
+
+            .copyright {
+                transition: all .5s ease;
+            }
+        }
+
+        :link {
+            text-decoration: none;
+        }
+
+        >div {
+            display: flex;
+            font-size: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-1 {
+            display: flex;
+            align-items: center;
+
+            .nav-links-one {
+                display: flex;
+                width: 126px;
+                height: 25px;
+                position: relative;
+                color: white;
+                font-size: 17px;
+                overflow: hidden;
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                }
+
+                .code {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    transition: all .5s cubic-bezier(0.87, 0, 0.13, 1);
+                }
+
+                .isaac {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 126px;
+                    transition: all .5s cubic-bezier(0.87, 0, 0.13, 1);
+                }
+            }
+
+            &:hover {
+                .copyright {
+                    transform: rotate(360deg);
+                }
+
+                .code {
+                    left: -70px;
+                }
+
+                .isaac {
+                    left: 48px;
+                }
+            }
+        }
+
+        .header-2 {
+            >* {
+                margin-left: 3rem;
+                font-size: 1.2rem;
+                color: white;
+                letter-spacing: 1px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.button {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .el {
+            height: 100%;
+            width: 100%;
+            &:hover {
+                .perspectiveText {
+                    transform: rotateX(90deg);
+                    p {
+                        &:nth-of-type(1) {
+                            transform: translateY(-100%);
+                            opacity: 0;
+                        }
+                        &:nth-of-type(2) {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .perspectiveText {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.5s cubic-bezier(0.075, 0, 0.24, 1);
+                transform-style: preserve-3d;
+                p {
+                    transition: all 0.5s cubic-bezier(0.075, 0, 0.24, 1);
+                    &:nth-of-type(2) {
+                        position: absolute;
+                        transform: rotateX(-90deg) translateY(9px);
+                        transform-origin: bottom center;
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 100%;
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+}
+
+.main-about {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(85, 85, 85);
+}
