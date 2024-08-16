@@ -9,13 +9,12 @@
   margin: 0;
 }
 
-html,
 body {
   width: 100%;
-  /* font-family: 'Avant Garde Book BT'; */
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
+  height: auto;
 }
 
 .body-main {
@@ -25,7 +24,10 @@ body {
 }
 
 .hero-image {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
   height: 100%;
 }
 
@@ -40,8 +42,8 @@ body {
 .body-text {
   width: fit-content;
   position: absolute;
-  right: 8%;
-  top: 45%;
+  right: 50px;
+  bottom: 0;
   transform: translateY(-50%);
 }
 
@@ -50,20 +52,95 @@ body {
   font-size: 50px;
 }
 
-/* .slider-container {
-  position: absolute;
-  top: calc(100vh - 280px);
-}
-.slider {
-  width: 100%;
+.hero {
   position: relative;
-  display: flex;
-  white-space: nowrap;
-  padding: 0;
+  width: 100%;
+  height: 100vh;
 }
-.slider p {
+
+.socials {
+  position: fixed;
+  top: calc(100vh - 300px);
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.socials >* {
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  margin: 200px 0;
+}
+
+.description-body {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+}
+
+.description-body p {
   margin: 0;
+}
+
+.description-body p:nth-of-type(1) {
+  padding-top: 0;
+  font-size: 48px;
+  letter-spacing: -1.5px;
+  color: rgb(30, 29, 29);
+  font-weight: 350;
+  line-height: 1.3;
+}
+
+.description-body p:nth-of-type(2) {
+  padding-top: 10px;
+  width: 65%;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+
+.description-body p:nth-of-type(1) span{
+  margin-right: 4px;
+}
+
+.mask {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.about-me {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(58, 58, 61);
+  top: 35%;
+  right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  text-transform: uppercase;
-  font-size: 250px;
-} */
+  font-size: 18px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.about-me p {
+  z-index: 6;
+}
+
+.circle {
+  width: 100%;
+  height: 150%;
+  z-index: 5;
+  border-radius: 50%;
+  top: 100%;
+  background-color: rgb(87, 87, 211);
+  position: absolute;
+}

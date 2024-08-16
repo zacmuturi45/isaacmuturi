@@ -1,9 +1,10 @@
 .inner {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(65, 65, 65);
     width: 100%;
     height: 100vh;
+
     .slide {
         position: fixed;
         z-index: 3;
@@ -128,14 +129,17 @@
         .el {
             height: 100%;
             width: 100%;
+
             &:hover {
                 .perspectiveText {
                     transform: rotateX(90deg);
+
                     p {
                         &:nth-of-type(1) {
                             transform: translateY(-100%);
                             opacity: 0;
                         }
+
                         &:nth-of-type(2) {
                             opacity: 1;
                         }
@@ -151,8 +155,10 @@
                 justify-content: center;
                 transition: transform 0.5s cubic-bezier(0.075, 0, 0.24, 1);
                 transform-style: preserve-3d;
+
                 p {
                     transition: all 0.5s cubic-bezier(0.075, 0, 0.24, 1);
+
                     &:nth-of-type(2) {
                         position: absolute;
                         transform: rotateX(-90deg) translateY(9px);
