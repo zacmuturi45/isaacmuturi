@@ -3,9 +3,12 @@ import NavLink from './navlink'
 import { motion } from 'framer-motion'
 import Svg from './svg'
 import { menuSlide } from '../../public/images/exports'
-import NavSocialLinks from './navSocialLinks'
+import { usePathname } from 'next/navigation'
 
 export default function Sidenav() {
+
+    const pathname = usePathname();
+
     const navItems = [
         {
             title: "Home",
@@ -24,26 +27,6 @@ export default function Sidenav() {
             href: "/contact"
         }
     ]
-
-    const navSocials = [
-        {
-            title: "Awwwards",
-            href: "/awwwards"
-        },
-        {
-            title: "Instagram",
-            href: "/instagram"
-        },
-        {
-            title: "Twitter",
-            href: "/twitter"
-        },
-        {
-            title: "LinkedIn",
-            href: "/linkedin"
-        }
-    ]
-
     return (
         <motion.main className='sidenav-container'
             variants={menuSlide}

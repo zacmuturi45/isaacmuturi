@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Transition from "@/components/Transition";
-import { arrowdown, docker, flask, gamebug, graphq, greensock, hero, insta, js, linkedin, nextj, postgres, python, react, sass, slideUp, whatsapp } from "../../public/images/exports";
+import { arrowdown, docker, flask, gamebug, github, graphq, greensock, hero, insta, js, linkedin, nextj, postgres, python, react, sass, slideUp, whatsapp } from "../../public/images/exports";
 import { useEffect, useRef, useState } from "react";
 import { color, inView, motion, useInView, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
@@ -13,19 +13,23 @@ import GsapMagnetic from "@/components/gsapMagnetic";
 import Modal from "@/components/modal";
 import Footer from "@/components/footer";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const description = "Helping brands stand out in the digital era. Together we will set the new status quo. No nonsense. Always on the cutting edge."
+  const supporting = "A perfection seeking developer, who, while aware he won't get there, knows he will catch excellence on the way. Code is my creative outlet and current professional focus."
+  const description = "Hello, my name's Isaac. While I love to work in Python and JavaScript, I have picked up a variety of tools that enable me to build webapps that are both robust and appeal to users."
+  // const description = "Helping brands stand out in the digital era. Together we will set the new status quo. No nonsense. Always on the cutting edge."
   const textRef = useRef(null);
   const isInView = useInView(textRef)
   const containerRef = useRef(null);
   const circle = useRef(null)
   const [modal, setModal] = useState({ active: false, index: 0 })
   const scrollRef = useRef(null)
+  const router = useRouter();
 
 
   const data = [
@@ -93,8 +97,8 @@ export default function Home() {
           <div className="body-main">
 
           <div className="body-isaac">
-            <div className="isc"><h1>Isaac</h1></div>
-            <div className="tsh"><h1>Tesha</h1></div>
+            <div className="isc"><h1>Isaac</h1><div className="isc-mask"><div className="sc"></div></div></div>
+            <div className="tsh"><h1>Tesha</h1><div className="tsh-mask"></div><div className="sht"></div></div>
             <div className="sp"></div>
           </div>
 
@@ -129,7 +133,7 @@ export default function Home() {
                   }
                   </>
                   <div className="sp"></div>
-                  <p className="bd-span">The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</p>
+                  <p className="bd-span">{supporting}</p>
                   <p className="coffee"><span>© Copyright 2024 Edition</span></p>
                 </div>
               </div>
@@ -150,18 +154,18 @@ export default function Home() {
                   }
                 </p>
 
-                <motion.p
+                {/* <motion.p
                   variants={inView}
                   initial="initial"
                   animate={isInView ? "open" : "closed"}
                   className="motion-p"
                 >
                   The combination of my passion for design, code & interaction positions me in a unique place in the web design world.
-                </motion.p>
+                </motion.p> */}
               </div>
 
               <GsapMagnetic>
-                <div className="about-me" onMouseEnter={(e) => mouseEnter(e)} onMouseLeave={(e) => mouseLeave(e)} ref={scrollRef}><p>Learn more</p><div ref={circle} className="circle"></div></div>
+                <div className="about-me" onMouseEnter={(e) => mouseEnter(e)} onMouseLeave={(e) => mouseLeave(e)} ref={scrollRef} onClick={() => router.push("/about")}><p>Learn more</p><div ref={circle} className="circle"></div></div>
               </GsapMagnetic>
 
             </div>
@@ -238,7 +242,7 @@ export default function Home() {
 
 
           <div className="socials">
-            <GsapMagnetic><Image src={js} width={27} height={27} alt="instagram" /></GsapMagnetic>
+            <GsapMagnetic><Image src={github} width={27} height={27} alt="instagram" /></GsapMagnetic>
             <GsapMagnetic><Image src={insta} width={27} height={27} alt="instagram" /></GsapMagnetic>
             <GsapMagnetic><Image src={whatsapp} width={25} height={25} alt="whatsapp" /></GsapMagnetic>
             <GsapMagnetic><Image src={linkedin} width={25} height={25} alt="linkedin" /></GsapMagnetic>

@@ -5,7 +5,7 @@ import Transition from '@/components/Transition'
 import gsap from 'gsap';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react'
-import { arrowdown, hero, insta, js, linkedin, whatsapp } from '../../../public/images/exports';
+import { arrowdown, github, hero, insta, js, linkedin, whatsapp } from '../../../public/images/exports';
 
 export default function Blog() {
     const [name, setName] = useState("");
@@ -34,7 +34,7 @@ export default function Blog() {
                     <div className='contact-div1'>
                         <div className='hire-me'>
                             <h1>Hire me/Feedback</h1>
-                            <p>Whether you're hiring or passing by, now that you know a little about me, your feedback will go a long way in helping me on my nascent developer journey. Please take a few minutes to write your thoughts, tips or advice. Cheers!</p>
+                            <p>Why does morning sunlight give you Vitamin D and noon sunlight, sunburn? Whether you're hiring or passing by, your feedback will go a long way in helping me on my nascent developer journey. Please take a few minutes to write your thoughts, tips or advice. Cheers!</p>
                         </div>
 
                         <div className='form-div'>
@@ -45,7 +45,7 @@ export default function Blog() {
                                     <input
                                         name='name'
                                         type="text"
-                                        placeholder='John Doe *'
+                                        placeholder='Sunny Vale *'
                                         id='nameinput'
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
@@ -57,7 +57,7 @@ export default function Blog() {
                                     <input
                                         name='email'
                                         type="text"
-                                        placeholder='john@does.com *'
+                                        placeholder='sunny@vale.com *'
                                         id='emailinput'
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
@@ -69,7 +69,7 @@ export default function Blog() {
                                     <input
                                         name='organization'
                                         type="text"
-                                        placeholder='John & Doe *'
+                                        placeholder='Sunny & Vale, California *'
                                         id='organizationinput'
                                         value={organization}
                                         onChange={(e) => setOrganization(e.target.value)}
@@ -93,7 +93,7 @@ export default function Blog() {
                                     <input
                                         name='message'
                                         type="text"
-                                        placeholder='Hello Isaac, I would like to schedule an interview... *'
+                                        placeholder='Hello Isaac, I live in the North Pole, we only have noon sunlight... *'
                                         id='messageinput'
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}
@@ -148,7 +148,7 @@ export default function Blog() {
 
                             <GsapMagnetic>
                                 <div>
-                                    <Image src={js} width={20} height={20} alt="instagram" />
+                                    <Image src={github} width={20} height={20} alt="instagram" />
                                     <p>Github</p>
                                 </div>
                             </GsapMagnetic>

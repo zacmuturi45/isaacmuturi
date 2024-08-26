@@ -20,7 +20,7 @@ export { default as postgres } from './postgres.svg';
 export { default as nextjs } from './nextjs.svg';
 export { default as graphq } from './graphql.svg';
 export { default as greensock } from './gsap.svg';
-
+export { default as github } from './github.svg';
 
 
 export const slideUp = {

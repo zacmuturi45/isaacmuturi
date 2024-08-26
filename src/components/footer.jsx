@@ -64,7 +64,9 @@ export default function Footer() {
                         <h1>Let's work</h1>
                     </div>
                     <h1 className='together'>together</h1>
-                    <motion.div style={{ x: x2 }} className='get-in-touch' onMouseEnter={() => mouseEnter(oval)} onMouseLeave={() => mouseLeave(oval)}><p>Get in touch</p><div className='circle' ref={oval}></div></motion.div>
+                    <GsapMagnetic>
+                    <motion.div className='get-in-touch' onMouseEnter={() => mouseEnter(oval)} onMouseLeave={() => mouseLeave(oval)}><p>Get in touch</p><div className='circle' ref={oval}></div></motion.div>
+                    </GsapMagnetic>
                     <Image src={arrowdown} alt='svg-arrow' height={40} width={30} className='arrow-image' />
                 </div>
 
@@ -77,7 +79,7 @@ export default function Footer() {
 
                     <div className='footer-links-container' id='ft'>
                        <div className="project-description">
-                        <p>This portfolio was partly inspired <span style={{color: "rgb(167, 167, 167)"}}>(by partly I mean a lot of it)</span> by the <span style={{color: "rgb(167, 167, 167)"}}>copy Dennis challenge</span> and coded in <span style={{color: "rgb(167, 167, 167)"}}>Visual Studio Code</span>. I built it with <span style={{color: "rgb(167, 167, 167)"}}>Next.js, Gsap, Framer-motion, SCSS</span> and deployed with <span style={{color: "rgb(167, 167, 167)"}}>Vercel</span>. All text is set in the <span style={{color: "rgb(167, 167, 167)"}}>BDO Grotesk</span> typeface. All icons are from <span style={{color: "rgb(167, 167, 167)"}}>svg-repo.</span></p>
+                       <p>This portfolio was inspired by the <span style={{color: "rgb(167, 167, 167)"}}>copy Dennis challenge</span> and coded in <span style={{color: "rgb(167, 167, 167)"}}>Visual Studio Code</span>. I built it with <span style={{color: "rgb(167, 167, 167)"}}>Next.js, Gsap, Framer-motion, SCSS</span> and deployed with <span style={{color: "rgb(167, 167, 167)"}}>Vercel</span>. All text is set in the <span style={{color: "rgb(167, 167, 167)"}}>BDO Grotesk</span> typeface. All icons are from <span style={{color: "rgb(167, 167, 167)"}}>svg-repo.</span></p>
                        </div>
 
                        <div className='footy'>

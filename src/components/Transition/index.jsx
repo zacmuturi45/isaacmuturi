@@ -16,21 +16,17 @@ export default function Transition({ children }) {
     const ov = useRef(null);
     const [tp, setTp] = useState(0);
     const [showBurger, setShowBurger] = useState(false);
+    const [showName, setShowName] = useState(false);
 
     const pathname = usePathname();
 
-    // useEffect(() => {
-    //     gsap.to(".header", {
-    //         opacity: 1,
-    //         duration: 1.2,
-    //         ease: "power3.inOut"
-    //     })
-    //     gsap.to(".c", {
-    //         opacity: 1,
-    //         duration: 1.2,
-    //         ease: "power3.inOut"
-    //     })
-    // }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            if (pathname !== "/") {
+                setShowName(true)
+            }
+        }, 650);
+    }, [pathname])
 
     useEffect(() => {
         const xTo = gsap.quickTo(burgerRef.current, "x", { duration: 1.2, ease: "elastic.out(1, 0.3)" })
@@ -167,7 +163,7 @@ export default function Transition({ children }) {
                 <motion.div className="header">
                     <div>
                         {
-                            pathname !== "/" && (
+                            showName && (
                                 <Link href="/" className='header-1'>
                                     <div className='c'>
                                         <Image src={c} width={17} height={17} alt='copyright-svg' className='copyright' />
@@ -181,7 +177,7 @@ export default function Transition({ children }) {
                         }
                     </div>
                     <div className='header-2'>
-                        <Link href="/"><Image src={hero} width={35} height={35} alt='hero-image' className='profile-pic'/></Link>
+                        <Link href="/"><Image src={hero} width={35} height={35} alt='hero-image' className='profile-pic' /></Link>
                         {/* About */}
                         <Link href="/about">
                             <div className='button' onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={() => handleMouseEnter(1)}>
