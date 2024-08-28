@@ -34,7 +34,7 @@ export default function About() {
     })
 
     const { scrollYProgress: arrowScroll } = useScroll({
-        target: arrowRef, 
+        target: arrowRef,
         offset: ["start end", "end start"]
     })
 
@@ -61,8 +61,8 @@ export default function About() {
                     </div>
 
                     <div className='about-content'>
-                        <div className='about-arrow' style={{left: degrees}}>
-                        <Image src={arrowblack} height={35} width={45} alt='arrowdown' />
+                        <div className='about-arrow' style={{ left: degrees }}>
+                            <Image src={arrowblack} height={35} width={45} alt='arrowdown' />
                         </div>
 
                         <div className='about-content-text' >
@@ -76,7 +76,7 @@ export default function About() {
 
                             <p>After nights of research, I settled on <span style={{ fontWeight: "bolder" }}>Moringa School</span>, a tech startup in Kenya that had a strong coding bootcamp program with a curriculum provided by <span style={{ fontWeight: "bolder" }}>Flatiron, New York</span>. I would only have to interview for a spot and cough up <span style={{ fontWeight: "bolder" }}>$1740</span>. While a smaller rate compared to most bootcamps in America, it was still a fortune in my world. I needed money! For the next 20 months, I would work as a <span style={{ fontWeight: "bolder" }}>bartender</span>, <span style={{ fontWeight: "bolder" }}>Food</span> and <span style={{ fontWeight: "bolder" }}>Beverage Supervisor</span>  and <span style={{ fontWeight: "bolder" }}>kitchen manager</span> respectively at a busy <span style={{ fontWeight: "bolder" }}>Casino</span> in <span style={{ fontWeight: "bolder" }}>Dar es Salaam</span>, <span style={{ fontWeight: "bolder" }}>Tanzania</span> to fund what would be the start of my new career. Even after all this I would still be short a cool <span style={{ fontWeight: "bolder" }}>$1500</span>, because, well, LIFE. Luckily the school was now offering a 30% to 70% scholarships to potential students. The caveat; your scholarship amount would depend on how well you performed on a rigorous logic test. So I sat the test on one less busy night shift in July at my former restaurant job, submitted it after an hour and went back to work.</p>
 
-                            <p>About a week later, I received the much awaited email that I got the full <span style={{ fontWeight: "bolder" }}>70% scholarship</span> and consequently passed the requirements to enroll. I explained the situation to my HR manager at the time who was a great help throughout the resignation process, worked on through <span style={{ fontWeight: "bolder" }}>August</span> as per the rules then finally started my bootcamp in September 2023. The bootcamp was an invaluable learning experience with a well-structured curriculum that was both easy to follow and covered technical topics comprehensively. Though I graduated in February 2024 after 6 months of rigorous study, I knew I was still not ready for the dream job I envisioned, the skills I had gained were a springboard of sorts, the feet so I could have actual feet to get wet. I would spend the next 5 months adding to my resume the skills I know I needed to both be a complete developer and code the dream project that had given me a reality check a week before my bootcamp's capstone project proposal. <span style={{textDecoration: "none", color: "blue", cursor: "pointer"}} onClick={() => router.push("/work")}>More of that here.</span></p>
+                            <p>About a week later, I received the much awaited email that I got the full <span style={{ fontWeight: "bolder" }}>70% scholarship</span> and consequently passed the requirements to enroll. I explained the situation to my HR manager at the time who was a great help throughout the resignation process, worked on through <span style={{ fontWeight: "bolder" }}>August</span> as per the rules then finally started my bootcamp in September 2023. The bootcamp was an invaluable learning experience with a well-structured curriculum that was both easy to follow and covered technical topics comprehensively. Though I graduated in February 2024 after 6 months of rigorous study, I knew I was still not ready for the dream job I envisioned, the skills I had gained were a springboard of sorts, the feet so I could have actual feet to get wet. I would spend the next 5 months adding to my resume the skills I know I needed to both be a complete developer and code the dream project that had given me a reality check a week before my bootcamp's capstone project proposal. <span style={{ textDecoration: "none", color: "blue", cursor: "pointer" }} onClick={() => router.push("/work")}>More of that here.</span></p>
 
                             <p> While I have grown immensely and gained significant knowledge and skills, to proceed and grow further, it is imperative that I immerse in a professional environment where my code can be assessed, critiqued and I can learn from much better developers. I know I'm a bit late to the party, but I&apos;m working to perfect my craft every single day, looking forward to gaining professional experience in web development related companies and actively contributing to the industry as a bonafide professional.
                                 I&apos;m a firm believer in the growth mindset concept, and that “life is not about finding yourself, but about creating yourself”.</p>
@@ -91,7 +91,12 @@ export default function About() {
 
                     <div className='about-content-details'>
                         <div className='details1'>
-                            <h2>What I bring on board ...</h2>
+                            <h2>What I bring on board</h2>
+                            <div className='ld'>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                         </div>
 
                         <div className='details-container'>

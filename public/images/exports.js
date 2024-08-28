@@ -21,6 +21,7 @@ export { default as nextjs } from './nextjs.svg';
 export { default as graphq } from './graphql.svg';
 export { default as greensock } from './gsap.svg';
 export { default as github } from './github.svg';
+export { default as chat } from './chat.svg';
 
 
 export const slideUp = {
@@ -91,3 +92,18 @@ export const slide = {
         transition: {duration: 0.8, ease: [0.85, 0, 0.15, 1], delay: 0.05 * i}
     })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

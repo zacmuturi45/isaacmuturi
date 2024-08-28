@@ -43,7 +43,7 @@
         z-index: 8;
         position: relative;
         background: transparent;
-        
+
 
         .c {
             opacity: 0;
@@ -75,6 +75,7 @@
         .header-1 {
             display: flex;
             align-items: center;
+
             .nav-links-one {
                 display: flex;
                 width: 125px;
@@ -125,6 +126,7 @@
             .profile-pic {
                 display: none;
             }
+
             >* {
                 margin-left: 3rem;
                 font-size: 1.2rem;
@@ -293,6 +295,7 @@
     align-items: center;
     color: white;
     font-size: 65px;
+
     .preloader-center {
         display: flex;
         justify-content: space-between;
@@ -301,6 +304,7 @@
         z-index: 100;
         width: fit-content;
         color: white;
+
         .preloader-abs {
             width: 20px;
             height: 20px;
@@ -308,9 +312,11 @@
             background-color: white;
         }
     }
+
     .p {
         z-index: 99;
         display: flex;
+
         .wordSpan {
             width: 20px;
             height: 20px;
@@ -336,15 +342,100 @@
 
 //PRELOADER
 
+.ld {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 17px;
+    right: -35px;
+    >div {
+        width: 5px;
+        background-color: black;
+        height: 5px;
+        margin-right: 4px;
+        border-radius: 50%;
+    }
+    
+    div:nth-child(1) {
+        animation: flicker 2s ease infinite;
+        animation-delay: 0s;
+    }
+    div:nth-child(2) {
+        animation: flicker 2s ease infinite;
+        animation-delay: 0.2s;
+    }
+    div:nth-child(3) {
+        animation: flicker 2s ease infinite;
+        animation-delay: 0.4s;
+    }
+
+    @keyframes flicker {
+        0%,
+        100% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1);
+        }
+    }
+}
+
+.login-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: fit-content;
+
+    >div {
+        width: 15px;
+        height: 15px;
+        margin: 2px;
+        border-radius: 50%;
+        background-color: rgb(90, 97, 192);
+    }
+
+    div:nth-child(1) {
+        animation: loader 1s ease infinite;
+        animation-delay: 0s;
+    }
+
+    div:nth-child(2) {
+        animation: loader 1s ease infinite;
+        animation-delay: 0.1s;
+    }
+
+    div:nth-child(3) {
+        animation: loader 1s ease infinite;
+        animation-delay: 0.2s;
+    }
+
+    @keyframes loader {
+
+        0%,
+        100% {
+            transform: scale(0);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+    }
+}
+
 
 @media screen and (max-width: 480px) {
-  .button {
-    width: fit-content;
-  }
+    .button {
+        width: fit-content;
+    }
 
-  .preloader-container {
-    font-size: 45px;
-  }
+    .preloader-container {
+        font-size: 45px;
+    }
 }
 
 
@@ -353,38 +444,47 @@
         .slide {
             z-index: -1;
         }
+
         .header {
             // border: 1px solid red;
             padding: 0;
+
             .burger-container {
                 width: 60px;
                 height: 60px;
             }
+
             >div:nth-of-type(1) {
                 display: none;
             }
+
             >div {
                 width: 100%;
             }
+
             .header-1 {
                 display: none;
             }
+
             .header-2 {
                 display: flex;
                 justify-content: space-between;
                 padding: 0 30px;
                 align-items: center;
+
                 .slider {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
+
                 .profile-pic {
                     display: block;
                     width: 55px;
                     height: 55px;
                     border-radius: 50%;
                 }
+
                 >* {
                     margin-left: 0;
                     font-size: 1rem;
@@ -399,42 +499,62 @@
 
 
 @media screen and (max-width: 980px) {
+    .ld {
+        display: none;
+    }
+    .main-contact {
+        .feedback {
+            flex-direction: column;
+            p {
+                font-size: 25px;
+            }
+        }
+    }
     .inner {
         .slide {
             z-index: -1;
         }
+
         .header {
             // border: 1px solid red;
             padding: 0;
+
             .burger-container {
                 width: 60px;
                 height: 60px;
             }
+
             >div:nth-of-type(1) {
                 display: none;
             }
+
             >div {
                 width: 100%;
             }
+
             .header-1 {
                 display: none;
             }
+
             .header-2 {
                 display: flex;
                 justify-content: space-between;
                 padding: 0 30px;
                 align-items: center;
+
                 .slider {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
+
                 .profile-pic {
                     display: block;
                     width: 55px;
                     height: 55px;
                     border-radius: 50%;
                 }
+
                 >* {
                     margin-left: 0;
                     font-size: 1rem;
@@ -522,6 +642,7 @@
 
 .slide-links {
     width: fit-content;
+
     >* {
         color: white;
 
@@ -538,6 +659,21 @@
     height: 100%;
     border: 1px solid hsl(0, 0%, 6%);
     position: relative;
+    .feedback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        display: flex;
+
+        p {
+            font-size: 35px;
+            text-align: center;
+            margin-left: 1rem;
+            color: white;
+        }
+    }
+
     .contact-cover {
         position: absolute;
         top: -100px;
@@ -550,7 +686,6 @@
     .main-contact-container {
         width: 1300px;
         margin: 120px auto;
-        padding-top: 120px;
         color: white;
         display: grid;
         grid-template-columns: 60% 30%;
@@ -563,6 +698,7 @@
         }
 
         .contact-div1 {
+
             .hire-me {
                 margin-bottom: 3rem;
 
@@ -624,17 +760,17 @@
                     height: 200px;
                     border-radius: 50%;
                     position: absolute;
-                    top: 50%;
+                    top: -100px;
                     right: 10%;
                     background-color: hsl(247, 58%, 42%);
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    transform: translateY(-50%);
                     border: none;
                     font-size: 1.2rem;
                     cursor: pointer;
                     overflow: hidden;
+                    color: white;
 
                     p {
                         z-index: 990;
@@ -672,6 +808,11 @@
             }
 
             .contact-socials {
+                :link {
+                    text-decoration: none;
+                    font-size: 15px;
+                    margin-bottom: .5rem;
+                }
                 >* {
                     margin: 1rem 0;
                 }
@@ -724,9 +865,13 @@
 
         .foot-social {
             display: flex;
+            :link {
+                text-decoration: none;
+            }
 
             p {
                 margin-right: .5rem;
+                color: white;
                 cursor: pointer;
 
                 &:hover {
@@ -749,6 +894,7 @@
         width: 1300px;
         margin: 0 auto;
         padding: 120px 0;
+
         .work-line {
             height: 1px;
             width: 0;
@@ -786,6 +932,7 @@
                 flex-direction: column;
                 gap: 2.5rem;
                 position: relative;
+
                 .demo {
                     position: absolute;
                     bottom: 0;
@@ -794,6 +941,7 @@
                     display: flex;
                     justify-content: space-between;
                     padding-bottom: 1rem;
+
                     >div {
                         padding: .8rem 2.5rem;
                         background-color: rgb(255, 255, 255);
@@ -821,6 +969,7 @@
     .glance-div {
         background-color: white;
         padding: 100px 0;
+
         .glance {
             width: 1300px;
             margin: 0 auto;
@@ -892,6 +1041,7 @@
         border: 1px solid hsl(0, 0%, 6%);
         position: relative;
         padding: 0 15px;
+
         .contact-cover {
             position: absolute;
             top: -100px;
@@ -900,7 +1050,7 @@
             height: 100px;
             background-color: hsl(0, 0%, 6%);
         }
-    
+
         .main-contact-container {
             width: 100%;
             margin: 0 auto;
@@ -911,51 +1061,51 @@
             justify-content: space-between;
             height: 100%;
             gap: 2rem;
-    
+
             >div {
                 width: 100%;
             }
-    
+
             .contact-div1 {
                 .hire-me {
                     margin-bottom: 3rem;
-    
+
                     h1 {
                         font-size: 40px;
                         letter-spacing: 0;
                         margin-bottom: 2rem;
                     }
-    
+
                     p {
                         color: rgb(120, 120, 120);
                         letter-spacing: .5px;
                         max-width: 100%;
                     }
                 }
-    
+
                 .form-div {
                     border-top: 1px solid rgb(31, 30, 30);
-    
+
                     form {
                         >div {
                             border-bottom: 1px solid rgb(31, 30, 30);
                             display: flex;
                             flex-direction: column;
                             padding: 3rem 0;
-    
+
                             label {
                                 font-size: 1rem;
                                 padding: 0 3rem;
                                 position: relative;
                                 margin-bottom: 1rem;
-    
+
                                 span {
                                     position: absolute;
                                     left: 0;
                                     color: rgb(62, 62, 62);
                                 }
                             }
-    
+
                             input {
                                 border: none;
                                 outline: none;
@@ -967,46 +1117,48 @@
                         }
                     }
                 }
-    
+
                 .send-it {
                     border-top: 1px solid rgb(31, 30, 30);
                     margin: 100px 0;
                     position: relative;
-    
+
                     .send-circle {
                         width: 120px;
                         height: 120px;
                         border: none;
                         font-size: 1rem;
+                        top: -60px;
                     }
                 }
             }
-    
+
             .contact-details {
                 display: flex;
                 flex-direction: row;
                 padding-top: 4rem;
                 gap: 1rem;
                 justify-content: space-between;
+
                 .arrowimg {
                     display: none;
                 }
-    
+
                 >div {
                     margin-bottom: 2rem;
                 }
-    
+
                 .contact-image {
                     width: 80px;
                     height: 80px;
                     border-radius: 50%;
                 }
-    
+
                 .contact-deets {
                     >* {
                         margin: .5rem 0;
                     }
-    
+
                     h4 {
                         color: rgb(62, 62, 62);
                         font-size: .6rem;
@@ -1014,33 +1166,34 @@
                         text-transform: uppercase;
                     }
                 }
-    
+
                 .contact-socials {
                     display: none;
+
                     >* {
                         margin: 1rem 0;
                     }
-    
+
                     h4 {
                         color: rgb(62, 62, 62);
                         font-size: .6rem;
                         letter-spacing: .5px;
                         text-transform: uppercase;
                     }
-    
+
                     >div {
                         display: flex;
                         align-items: center;
                         cursor: pointer;
                         width: fit-content;
-    
+
                         &:hover {
                             p {
                                 border-bottom: 1px solid rgb(47, 47, 47);
                                 border-bottom-width: .5px;
                             }
                         }
-    
+
                         p {
                             margin: 0 .5rem;
                         }
@@ -1048,7 +1201,7 @@
                 }
             }
         }
-    
+
         .contact-footer {
             color: white;
             display: flex;
@@ -1061,14 +1214,14 @@
             //     justify-content: space-between;
             //     width: 100%;
             // }
-    
+
             h4 {
                 color: rgb(62, 62, 62);
                 font-size: .6rem;
                 letter-spacing: .5px;
                 text-transform: uppercase;
             }
-    
+
             p {
                 font-size: .9rem;
             }
@@ -1076,14 +1229,14 @@
             // .div-social {
             //     display: none;
             // }
-    
+
             .foot-social {
                 // display: none;
-    
+
                 p {
                     margin-right: .5rem;
                     cursor: pointer;
-    
+
                     &:hover {
                         border-bottom: 1px solid rgb(47, 47, 47);
                         border-bottom-width: .5px;
@@ -1173,75 +1326,80 @@
         padding-top: 0;
         background-color: rgb(244, 244, 244);
         position: relative;
-    
+
         .main-work-container {
             width: 100%;
             margin: 0;
             padding: 120px 15px;
-    
+
             h1 {
                 font-size: 30px;
                 letter-spacing: 0;
                 margin-bottom: 3rem;
                 width: fit-content;
             }
-    
+
             h4 {
                 font-size: 20px;
             }
-    
+
             .content {
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
                 gap: 3rem;
                 width: 100%;
-    
+
                 p {
                     font-size: 1rem;
                     margin-bottom: .5rem;
                     font-weight: 500;
                     letter-spacing: 0;
                 }
-    
+
                 .content-img-div {
                     display: flex;
                     flex-direction: column;
                     gap: 1.5rem;
                     position: relative;
                     justify-content: center;
+
                     #gmb {
                         margin: 0 auto;
                         width: 100%;
+
                         >* {
                             width: 100%;
                         }
                     }
+
                     .demo {
                         position: relative;
                         width: 100%;
                         display: flex;
                         justify-content: space-around;
                         padding-bottom: 1rem;
+
                         >div {
                             padding: .8rem .5rem;
                             background-color: rgb(255, 255, 255);
                             border-radius: 3px;
                             border: none;
                             box-shadow: 2px 2px 5px 2px rgb(236, 236, 236);
-    
+
                         }
                     }
-    
+
                     .gamebug-image {
                         width: 90%;
                         height: 90%;
                     }
-    
+
                     .content-grid {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         gap: .5rem;
+
                         >* {
                             width: 100%;
                         }
@@ -1255,10 +1413,12 @@
         background-color: white;
         padding: 60px 15px;
         width: 100%;
+
         #gl {
             width: 100%;
             padding: 0 15px;
         }
+
         .glance {
             width: fit-content;
             margin: 0 auto;
@@ -1309,6 +1469,7 @@
             .outcomes {
                 width: fit-content;
                 margin: 3rem 0;
+
                 h1 {
                     font-size: 1.5rem;
                 }
@@ -1353,6 +1514,7 @@
         border: 1px solid hsl(0, 0%, 6%);
         position: relative;
         padding: 0 15px;
+
         .contact-cover {
             position: absolute;
             top: -100px;
@@ -1361,7 +1523,7 @@
             height: 100px;
             background-color: hsl(0, 0%, 6%);
         }
-    
+
         .main-contact-container {
             width: 100%;
             margin: 0 auto;
@@ -1372,21 +1534,21 @@
             justify-content: space-between;
             height: 100%;
             gap: 2rem;
-    
+
             >div {
                 width: 100%;
             }
-    
+
             .contact-div1 {
                 .hire-me {
                     margin-bottom: 3rem;
-    
+
                     h1 {
                         font-size: 40px;
                         letter-spacing: 0;
                         margin-bottom: 2rem;
                     }
-    
+
                     p {
                         color: rgb(120, 120, 120);
                         letter-spacing: .5px;
@@ -1394,30 +1556,30 @@
                         font-size: 1rem;
                     }
                 }
-    
+
                 .form-div {
                     border-top: 1px solid rgb(31, 30, 30);
-    
+
                     form {
                         >div {
                             border-bottom: 1px solid rgb(31, 30, 30);
                             display: flex;
                             flex-direction: column;
                             padding: 3rem 0;
-    
+
                             label {
                                 font-size: 1rem;
                                 padding: 0 3rem;
                                 position: relative;
                                 margin-bottom: 1rem;
-    
+
                                 span {
                                     position: absolute;
                                     left: 0;
                                     color: rgb(62, 62, 62);
                                 }
                             }
-    
+
                             input {
                                 border: none;
                                 outline: none;
@@ -1430,43 +1592,44 @@
                         }
                     }
                 }
-    
+
                 .send-it {
                     border-top: 1px solid rgb(31, 30, 30);
                     margin: 100px 0;
                     position: relative;
-    
+
                     .send-circle {
                         width: 120px;
                         height: 120px;
                         border: none;
                         font-size: 1rem;
+                        top: -60px;
                     }
                 }
             }
-    
+
             .contact-details {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 padding-top: 4rem;
                 gap: 1rem;
-    
+
                 >div {
                     margin-bottom: 2rem;
                 }
-    
+
                 .contact-image {
                     width: 80px;
                     height: 80px;
                     border-radius: 50%;
                 }
-    
+
                 .contact-deets {
                     >* {
                         margin: .5rem 0;
                     }
-    
+
                     h4 {
                         color: rgb(62, 62, 62);
                         font-size: .6rem;
@@ -1474,32 +1637,32 @@
                         text-transform: uppercase;
                     }
                 }
-    
+
                 .contact-socials {
                     >* {
                         margin: 1rem 0;
                     }
-    
+
                     h4 {
                         color: rgb(62, 62, 62);
                         font-size: .6rem;
                         letter-spacing: .5px;
                         text-transform: uppercase;
                     }
-    
+
                     >div {
                         display: flex;
                         align-items: center;
                         cursor: pointer;
                         width: fit-content;
-    
+
                         &:hover {
                             p {
                                 border-bottom: 1px solid rgb(47, 47, 47);
                                 border-bottom-width: .5px;
                             }
                         }
-    
+
                         p {
                             margin: 0 .5rem;
                         }
@@ -1507,7 +1670,7 @@
                 }
             }
         }
-    
+
         .contact-footer {
             color: white;
             display: flex;
@@ -1520,14 +1683,14 @@
                 justify-content: space-between;
                 width: 100%;
             }
-    
+
             h4 {
                 color: rgb(62, 62, 62);
                 font-size: .6rem;
                 letter-spacing: .5px;
                 text-transform: uppercase;
             }
-    
+
             p {
                 font-size: .9rem;
             }
@@ -1535,14 +1698,14 @@
             .div-social {
                 display: none;
             }
-    
+
             .foot-social {
                 display: none;
-    
+
                 p {
                     margin-right: .5rem;
                     cursor: pointer;
-    
+
                     &:hover {
                         border-bottom: 1px solid rgb(47, 47, 47);
                         border-bottom-width: .5px;
@@ -1563,75 +1726,80 @@
         padding-top: 0;
         background-color: rgb(244, 244, 244);
         position: relative;
-    
+
         .main-work-container {
             width: 100%;
             margin: 0;
             padding: 120px 15px;
-    
+
             h1 {
                 font-size: 30px;
                 letter-spacing: 0;
                 margin-bottom: 3rem;
                 width: fit-content;
             }
-    
+
             h4 {
                 font-size: 20px;
             }
-    
+
             .content {
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
                 gap: 3rem;
                 width: 100%;
-    
+
                 p {
                     font-size: 1rem;
                     margin-bottom: .5rem;
                     font-weight: 500;
                     letter-spacing: 0;
                 }
-    
+
                 .content-img-div {
                     display: flex;
                     flex-direction: column;
                     gap: 1.5rem;
                     position: relative;
                     justify-content: center;
+
                     #gmb {
                         margin: 0 auto;
                         width: 100%;
+
                         >* {
                             width: 100%;
                         }
                     }
+
                     .demo {
                         position: relative;
                         width: 100%;
                         display: flex;
                         justify-content: space-around;
                         padding-bottom: 1rem;
+
                         >div {
                             padding: .8rem .5rem;
                             background-color: rgb(255, 255, 255);
                             border-radius: 3px;
                             border: none;
                             box-shadow: 2px 2px 5px 2px rgb(236, 236, 236);
-    
+
                         }
                     }
-    
+
                     .gamebug-image {
                         width: 90%;
                         height: 90%;
                     }
-    
+
                     .content-grid {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         gap: .5rem;
+
                         >* {
                             width: 100%;
                         }
@@ -1645,10 +1813,12 @@
         background-color: white;
         padding: 60px 15px;
         width: 100%;
+
         #gl {
             width: 100%;
             padding: 0 15px;
         }
+
         .glance {
             width: fit-content;
             margin: 0 auto;
@@ -1699,6 +1869,7 @@
             .outcomes {
                 width: fit-content;
                 margin: 3rem 0;
+
                 h1 {
                     font-size: 1.5rem;
                 }

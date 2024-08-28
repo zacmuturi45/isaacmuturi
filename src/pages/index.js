@@ -96,41 +96,41 @@ export default function Home() {
         <div className={styles.body}>
           <div className="body-main">
 
-          <div className="body-isaac">
-            <div className="isc"><h1>Isaac</h1><div className="isc-mask"><div className="sc"></div></div></div>
-            <div className="tsh"><h1>Tesha</h1><div className="tsh-mask"></div><div className="sht"></div></div>
-            <div className="sp"></div>
-          </div>
+            <div className="body-isaac">
+              <div className="isc"><h1>Isaac</h1><div className="isc-mask"><div className="sc"></div></div></div>
+              <div className="tsh"><h1>Tesha</h1><div className="tsh-mask"></div><div className="sht"></div></div>
+              <div className="sp"></div>
+            </div>
 
             <div className="body-container">
               <div className="body-text">
                 <div className="body-arrow"><Image src={arrowdown} width={40} height={40} alt="arrow" /></div>
                 <div className="body-text-p">
                   <>
-                  {
-                    "Full Stack".split(" ").map((word, index) => {
-                      return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
-                      initial="initial" animate="open">{word}</motion.span></p>
-                    })
-                  }
+                    {
+                      "Full Stack".split(" ").map((word, index) => {
+                        return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
+                          initial="initial" animate="open">{word}</motion.span></p>
+                      })
+                    }
                   </>
                   <div className="sp"></div>
                   <>
-                  {
-                    "Web".split(" ").map((word, index) => {
-                      return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
-                      initial="initial" animate="open">{word}</motion.span></p>
-                    })
-                  }
+                    {
+                      "Web".split(" ").map((word, index) => {
+                        return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
+                          initial="initial" animate="open">{word}</motion.span></p>
+                      })
+                    }
                   </>
                   <div className="sp"></div>
                   <>
-                  {
-                    "Developer".split(" ").map((word, index) => {
-                      return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
-                      initial="initial" animate="open">{word}</motion.span></p>
-                    })
-                  }
+                    {
+                      "Developer".split(" ").map((word, index) => {
+                        return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
+                          initial="initial" animate="open">{word}</motion.span></p>
+                      })
+                    }
                   </>
                   <div className="sp"></div>
                   <p className="bd-span">{supporting}</p>
@@ -178,7 +178,7 @@ export default function Home() {
                     <h2>{project.title}</h2>
                     <p>Full Stack</p>
                   </div>
-                  <Link href="/work" style={{textDecoration: "none"}}><button className="game-button">View</button></Link>
+                  <Link href="/work" style={{ textDecoration: "none" }}><button className="game-button">View</button></Link>
                 </div>
               ))
             }
@@ -186,29 +186,29 @@ export default function Home() {
 
           </div>
 
-            <div className="tch"><p>My Tech stack</p></div>
-            <div className="mobile-stack">
-              <div className="mdiv1">
-                <h2>Frontend</h2>
-                <div><Image src={js} width={25} height={25}/><p>JavaScript</p></div>
-                <div><Image src={react} width={25} height={25}/><p>React.js</p></div>
-                <div><Image src={nextj} width={25} height={25}/><p>Next.js</p></div>
-                <div><Image src={sass} width={25} height={25}/><p>Sass</p></div>
-                <div><Image src={greensock} width={25} height={25}/><p>Gsap</p></div>
-              </div>
-
-              <div className="mdiv2">
-                <h2>Backend</h2>
-                <div><Image src={python} width={25} height={25}/><p>Python</p></div>
-                <div><Image src={flask} width={25} height={25}/><p>Flask</p></div>
-                <div><Image src={graphq} width={25} height={25}/><p>GraphQL</p></div>
-                <div><Image src={docker} width={25} height={25}/><p>Docker</p></div>
-                <div><Image src={postgres} width={25} height={25}/><p>Postgres</p></div>
-              </div>
+          <div className="tch"><p>My Tech stack</p></div>
+          <div className="mobile-stack">
+            <div className="mdiv1">
+              <h2>Frontend</h2>
+              <div><Image src={js} width={25} height={25} /><p>JavaScript</p></div>
+              <div><Image src={react} width={25} height={25} /><p>React.js</p></div>
+              <div><Image src={nextj} width={25} height={25} /><p>Next.js</p></div>
+              <div><Image src={sass} width={25} height={25} /><p>Sass</p></div>
+              <div><Image src={greensock} width={25} height={25} /><p>Gsap</p></div>
             </div>
+
+            <div className="mdiv2">
+              <h2>Backend</h2>
+              <div><Image src={python} width={25} height={25} /><p>Python</p></div>
+              <div><Image src={flask} width={25} height={25} /><p>Flask</p></div>
+              <div><Image src={graphq} width={25} height={25} /><p>GraphQL</p></div>
+              <div><Image src={docker} width={25} height={25} /><p>Docker</p></div>
+              <div><Image src={postgres} width={25} height={25} /><p>Postgres</p></div>
+            </div>
+          </div>
           <div className="sliders" ref={containerRef}>
 
-            <motion.div className="slider-div" style={{x: x1}}>
+            <motion.div className="slider-div" style={{ x: x1 }}>
               {
                 backend.map((item, index) => (
                   <div key={`sl1${index}`} className="slider-container">
@@ -220,21 +220,21 @@ export default function Home() {
             </motion.div>
 
 
-            <motion.div className="slider-div" style={{x: x2}}>
+            <motion.div className="slider-div" style={{ x: x2 }}>
               {
                 frontend.map((item, index) => (
                   <div key={`sl2${index}`} className="slider-container">
                     {/* <Image src={item.image} width={35} height={35} alt="image" className="slider-image" /> */}
-                    <p style={{ color: "red"}}>{item.skill}</p>
+                    <p style={{ color: "red" }}>{item.skill}</p>
                   </div>
                 ))
               }
             </motion.div>
 
-            <motion.div style={{height: height}} className="curve-div">
+            <motion.div style={{ height: height }} className="curve-div">
               <div className="curve"></div>
             </motion.div>
-            
+
           </div>
           <Footer />
 
@@ -242,10 +242,10 @@ export default function Home() {
 
 
           <div className="socials">
-            <GsapMagnetic><Image src={github} width={27} height={27} alt="instagram" /></GsapMagnetic>
-            <GsapMagnetic><Image src={insta} width={27} height={27} alt="instagram" /></GsapMagnetic>
-            <GsapMagnetic><Image src={whatsapp} width={25} height={25} alt="whatsapp" /></GsapMagnetic>
-            <GsapMagnetic><Image src={linkedin} width={25} height={25} alt="linkedin" /></GsapMagnetic>
+            <a href="https://www.instagram.com/muturizac/?hl=en" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={insta} width={25} height={25} alt="whatsapp" /></GsapMagnetic></a>
+            <a href="https://github.com/zacmuturi45" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={github} width={27} height={27} alt="instagram" /></GsapMagnetic></a>
+            <a href="https://wa.me/255747010039" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={whatsapp} width={25} height={25} alt="whatsapp" /></GsapMagnetic></a>
+            <a href="https://www.linkedin.com/in/isaac-tesha-997a0514b/" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={linkedin} width={25} height={25} alt="linkedin" /></GsapMagnetic></a>
           </div>
 
 

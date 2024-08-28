@@ -268,6 +268,80 @@
   fill: black;
 }
 
+.ld {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 17px;
+  right: -35px;
+}
+.ld > div {
+  width: 5px;
+  background-color: black;
+  height: 5px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+.ld div:nth-child(1) {
+  animation: flicker 2s ease infinite;
+  animation-delay: 0s;
+}
+.ld div:nth-child(2) {
+  animation: flicker 2s ease infinite;
+  animation-delay: 0.2s;
+}
+.ld div:nth-child(3) {
+  animation: flicker 2s ease infinite;
+  animation-delay: 0.4s;
+}
+@keyframes flicker {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.login-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: fit-content;
+}
+.login-loader > div {
+  width: 15px;
+  height: 15px;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: rgb(90, 97, 192);
+}
+.login-loader div:nth-child(1) {
+  animation: loader 1s ease infinite;
+  animation-delay: 0s;
+}
+.login-loader div:nth-child(2) {
+  animation: loader 1s ease infinite;
+  animation-delay: 0.1s;
+}
+.login-loader div:nth-child(3) {
+  animation: loader 1s ease infinite;
+  animation-delay: 0.2s;
+}
+@keyframes loader {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
 @media screen and (max-width: 480px) {
   .button {
     width: fit-content;
@@ -322,6 +396,15 @@
   }
 }
 @media screen and (max-width: 980px) {
+  .ld {
+    display: none;
+  }
+  .main-contact .feedback {
+    flex-direction: column;
+  }
+  .main-contact .feedback p {
+    font-size: 25px;
+  }
   .inner .slide {
     z-index: -1;
   }
@@ -450,6 +533,19 @@
   border: 1px solid hsl(0, 0%, 6%);
   position: relative;
 }
+.main-contact .feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  display: flex;
+}
+.main-contact .feedback p {
+  font-size: 35px;
+  text-align: center;
+  margin-left: 1rem;
+  color: white;
+}
 .main-contact .contact-cover {
   position: absolute;
   top: -100px;
@@ -461,7 +557,6 @@
 .main-contact .main-contact-container {
   width: 1300px;
   margin: 120px auto;
-  padding-top: 120px;
   color: white;
   display: grid;
   grid-template-columns: 60% 30%;
@@ -523,17 +618,17 @@
   height: 200px;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: -100px;
   right: 10%;
   background-color: hsl(247, 58%, 42%);
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50%);
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
   overflow: hidden;
+  color: white;
 }
 .main-contact .main-contact-container .contact-div1 .send-it .send-circle p {
   z-index: 990;
@@ -559,6 +654,11 @@
   font-size: 0.6rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+.main-contact .main-contact-container .contact-details .contact-socials :link {
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 0.5rem;
 }
 .main-contact .main-contact-container .contact-details .contact-socials > * {
   margin: 1rem 0;
@@ -601,8 +701,12 @@
 .main-contact .contact-footer .foot-social {
   display: flex;
 }
+.main-contact .contact-footer .foot-social :link {
+  text-decoration: none;
+}
 .main-contact .contact-footer .foot-social p {
   margin-right: 0.5rem;
+  color: white;
   cursor: pointer;
 }
 .main-contact .contact-footer .foot-social p:hover {
@@ -812,6 +916,7 @@
     height: 120px;
     border: none;
     font-size: 1rem;
+    top: -60px;
   }
   .main-contact .main-contact-container .contact-details {
     display: flex;
@@ -1114,6 +1219,7 @@
     height: 120px;
     border: none;
     font-size: 1rem;
+    top: -60px;
   }
   .main-contact .main-contact-container .contact-details {
     display: flex;

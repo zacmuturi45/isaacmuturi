@@ -1,7 +1,3 @@
-@font-face {
-  font-family: 'Avant Garde Book BT';
-  src: url('../../public/fonts/AVGARDD_2.woff') format('woff');
-}
 
 @font-face {
   font-family: 'bdo-grotesk';
@@ -740,12 +736,17 @@ body {
 }
 
 .details1 {
+  position: relative;
+  padding: 0;
   margin: 30px 0;
+  display: flex;
+  width: fit-content;
 }
 
 .details1 h2 {
   font-size: 55px;
   color: rgb(42, 42, 42);
+  height: fit-content;
 }
 
 .details-span {
@@ -1089,7 +1090,7 @@ body {
 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1290px) {
   .mobile-stack {
     display: flex;
     padding: 0 30px;
@@ -1586,6 +1587,10 @@ body {
     display: none;
   }
 
+  .about-content-text {
+    font-size: 1rem;
+  }
+
   .about-content-details {
     margin: 0 15px;
   }
@@ -1632,7 +1637,9 @@ body {
     display: none;
   }
 
-
+  .details-h3 p{
+    font-size: 1rem;
+  }
 
 
 }

@@ -7,13 +7,14 @@ import NavSocialLinks from './navSocialLinks';
 import Image from 'next/image';
 import GsapMagnetic from './gsapMagnetic';
 import gsap from 'gsap';
+import { useRouter } from 'next/navigation';
 
 
 export default function Footer() {
     const circle = useRef(null);
     const circle2 = useRef(null);
     const oval = useRef(null);
-
+    const router = useRouter();
     const footerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: footerRef,
@@ -65,7 +66,7 @@ export default function Footer() {
                     </div>
                     <h1 className='together'>together</h1>
                     <GsapMagnetic>
-                    <motion.div className='get-in-touch' onMouseEnter={() => mouseEnter(oval)} onMouseLeave={() => mouseLeave(oval)}><p>Get in touch</p><div className='circle' ref={oval}></div></motion.div>
+                    <motion.div className='get-in-touch' onMouseEnter={() => mouseEnter(oval)} onMouseLeave={() => mouseLeave(oval)} onClick={() => router.push("/contact")}><p>Get in touch</p><div className='circle' ref={oval}></div></motion.div>
                     </GsapMagnetic>
                     <Image src={arrowdown} alt='svg-arrow' height={40} width={30} className='arrow-image' />
                 </div>
