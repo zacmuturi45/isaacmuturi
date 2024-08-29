@@ -166,7 +166,7 @@ export default function Transition({ children }) {
                             showName && (
                                 <Link href="/" className='header-1'>
                                     <div className='c'>
-                                        <Image src={c} width={17} height={17} alt='copyright-svg' className='copyright' />
+                                        <Image src={c} width={18} height={18} alt='copyright-svg' className='copyright' />
                                     </div>
                                     <div className='nav-links-one'>
                                         <p className={pathname === "/" || pathname === "/contact" ? "code" : "code path"}>Code by Isaac</p>

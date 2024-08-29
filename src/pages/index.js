@@ -98,7 +98,7 @@ export default function Home() {
 
             <div className="body-isaac">
               <div className="isc"><h1>Isaac</h1><div className="isc-mask"><div className="sc"></div></div></div>
-              <div className="tsh"><h1>Tesha</h1><div className="tsh-mask"></div><div className="sht"></div></div>
+              <div className="tsh"><h1>Gichuhi</h1><div className="tsh-mask"></div><div className="sht"></div></div>
               <div className="sp"></div>
             </div>
 
@@ -154,14 +154,6 @@ export default function Home() {
                   }
                 </p>
 
-                {/* <motion.p
-                  variants={inView}
-                  initial="initial"
-                  animate={isInView ? "open" : "closed"}
-                  className="motion-p"
-                >
-                  The combination of my passion for design, code & interaction positions me in a unique place in the web design world.
-                </motion.p> */}
               </div>
 
               <GsapMagnetic>
@@ -172,7 +164,7 @@ export default function Home() {
 
             {
               data.map((project, index) => (
-                <div className="work" onMouseEnter={() => { setModal({ active: true, index: index }) }} onMouseLeave={() => setModal({ active: false, index: index })} key={index}>
+                <div className="work" onMouseEnter={() => { setModal({ active: true, index: index }) }} onMouseLeave={() => setModal({ active: false, index: index })} key={index} onClick={() => router.push("/work")}>
                   <p>main project</p>
                   <div className="main-work-project">
                     <h2>{project.title}</h2>

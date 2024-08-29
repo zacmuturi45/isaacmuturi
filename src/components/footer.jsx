@@ -1,8 +1,8 @@
 "use client"
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { arrowdown, c, hero } from '../../public/images/exports';
+import { arrowdown, c, cwhite, hero, localTime } from '../../public/images/exports';
 import NavSocialLinks from './navSocialLinks';
 import Image from 'next/image';
 import GsapMagnetic from './gsapMagnetic';
@@ -16,10 +16,25 @@ export default function Footer() {
     const oval = useRef(null);
     const router = useRouter();
     const footerRef = useRef(null);
+    const [time, setTime] = useState("");
     const { scrollYProgress } = useScroll({
         target: footerRef,
         offset: ["start end", "end end"]
     });
+
+    useEffect(() => {
+        setTime(localTime())
+        updateTime()
+    }, [time])
+
+    const updateTime = () => {
+        const now = new Date();
+        const getSeconds = now.getSeconds()
+        const secondsDifference = 1000*(60 - getSeconds)
+        setInterval(() => {
+            setTime(localTime())
+        }, secondsDifference);
+    }
 
     const x2 = useTransform(scrollYProgress, [0, 1], [0, 150])
     const y = useTransform(scrollYProgress, [0, 1], [-30, 0])
@@ -80,18 +95,18 @@ export default function Footer() {
 
                     <div className='footer-links-container' id='ft'>
                        <div className="project-description">
-                       <p>This portfolio was inspired by the <span style={{color: "rgb(167, 167, 167)"}}>copy Dennis challenge</span> and coded in <span style={{color: "rgb(167, 167, 167)"}}>Visual Studio Code</span>. I built it with <span style={{color: "rgb(167, 167, 167)"}}>Next.js, Gsap, Framer-motion, SCSS</span> and deployed with <span style={{color: "rgb(167, 167, 167)"}}>Vercel</span>. All text is set in the <span style={{color: "rgb(167, 167, 167)"}}>BDO Grotesk</span> typeface. All icons are from <span style={{color: "rgb(167, 167, 167)"}}>svg-repo.</span></p>
+                       <p>This portfolio design was inspired by <span style={{color: "rgb(167, 167, 167)"}}><a href="https://dennissnellenberg.com/" target='_blank' rel='noopener noreferrer' style={{textDecoration: "none"}}>Dennis Snellenberg</a></span> and coded in <span style={{color: "rgb(167, 167, 167)"}}>Visual Studio Code</span>. I built it with <span style={{color: "rgb(167, 167, 167)"}}>Next.js, Gsap, Framer-motion, SCSS</span> and deployed with <span style={{color: "rgb(167, 167, 167)"}}>Vercel</span>. All text is set in the <span style={{color: "rgb(167, 167, 167)"}}>BDO Grotesk</span> typeface. All icons are from <span style={{color: "rgb(167, 167, 167)"}}>svg-repo.</span></p>
                        </div>
 
                        <div className='footy'>
                        <div className='footer-links-version'>
                             <p className='p1'>version</p>
-                            <p className='p2'>2024<span><Image src={c} width={15} height={15} alt='copyright' /></span>Edition</p>
+                            <p className='p2'>2024<span><Image src={cwhite} width={15} height={15} alt='copyright' /></span>Edition</p>
                         </div>
 
                         <div className='footer-links-time'>
                             <p className='ptime'>local time</p>
-                            <p className='ptime2'>14:05 PM GMT+2</p>
+                            <p className='ptime2'>{time}</p>
                         </div>
                        </div>
                     </div>

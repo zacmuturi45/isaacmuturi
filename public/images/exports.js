@@ -6,6 +6,7 @@ export { default as whatsapp } from './whatsapp.svg';
 export { default as linkedin } from './linkedin.svg';
 export { default as js } from './js.svg';
 export { default as ashton } from './ashton.png';
+export { default as cwhite } from './cwhite.svg';
 export { default as gamebug } from './gamebug.png';
 export { default as python } from './python.svg';
 export { default as react } from './react.svg';
@@ -22,6 +23,25 @@ export { default as graphq } from './graphql.svg';
 export { default as greensock } from './gsap.svg';
 export { default as github } from './github.svg';
 export { default as chat } from './chat.svg';
+
+export const localTime = () => {
+    const now = new Date()
+    const hours = now.getHours()
+    const minutes = now.getMinutes()
+    const timeZoneOffset = -now.getTimezoneOffset() / 60
+    const gmtSign = timeZoneOffset >= 0 ? '+' : '-';
+    const gmtOffset = `${gmtSign}${Math.abs(timeZoneOffset)}`;
+
+    const formattedHours = hours >=10 ? hours : `0${hours}`
+    const formattedMinutes = minutes >= 10 ? minutes : `0${minutes}`
+
+    const am_pm = hours >= 12 ? 'PM' : 'AM';
+
+    const time_now = `${formattedHours}:${formattedMinutes} ${am_pm} GMT${gmtOffset}`
+
+    return time_now
+}
+
 
 
 export const slideUp = {

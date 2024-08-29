@@ -35,7 +35,7 @@ export default function About() {
 
     const { scrollYProgress: arrowScroll } = useScroll({
         target: arrowRef,
-        offset: ["start end", "end start"]
+        offset: ["start end", "end end"]
     })
 
     const degrees = useTransform(arrowScroll, [0, 1], [90, 0])
@@ -61,7 +61,7 @@ export default function About() {
                     </div>
 
                     <div className='about-content'>
-                        <div className='about-arrow' style={{ left: degrees }}>
+                        <div className='about-arrow' style={{ transform: `rotate(${degrees}deg)`}}>
                             <Image src={arrowblack} height={35} width={45} alt='arrowdown' />
                         </div>
 

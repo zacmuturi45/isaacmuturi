@@ -311,7 +311,20 @@ body {
   height: auto;
 }
 
-.cursor,
+.cursor {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(44, 92, 147);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  z-index: 89;
+  pointer-events: none;
+}
+
 .cursor-label {
   width: 80px;
   height: 80px;
@@ -325,6 +338,11 @@ body {
   z-index: 89;
   pointer-events: none;
 }
+
+.crs {
+  position: absolute;
+}
+
 
 .tch {
   width: 80%;
@@ -717,7 +735,7 @@ body {
   position: absolute;
   top: 0;
   left: -150px;
-  transform: rotate(-90deg);
+  border: 2px solid red;
 }
 
 .about-content-details {

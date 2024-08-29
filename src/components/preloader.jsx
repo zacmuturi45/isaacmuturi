@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 export default function PreLoader() {
     const [index, setIndex] = useState(0);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-    const words = ["Karibu", "Welcome", "Wilkommen", "Niaje", "Hallo", "Hello", "Bonjour", "Mambo Vipi", "Ni hao", "Konichiwa"]
+    const words = ["Karibu", "Welcome", "Wilkommen", "いらっしゃいませ", "bienvenu", "欢迎", "bienvenido", "स्वागत", "välkomna"]
     const router = useRouter()
 
     useEffect(() => {

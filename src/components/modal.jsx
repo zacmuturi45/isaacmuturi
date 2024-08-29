@@ -19,6 +19,19 @@ export default function Modal({ modal, images }) {
     const cursor = useRef(null);
     const cursorLabel = useRef(null);
     const router = useRouter();
+    const crsRef = useRef(null);
+
+    const mods = document.getElementById('mods')
+
+    window.addEventListener('click', (event) => {
+        if (event.target === mods) {
+            console.log("Yes I was clicked")
+        } else {
+            console.log("Nope, didn't come from here mate")
+        }
+    })
+
+
 
     useEffect(() => {
         const moveContainerX = gsap.quickTo(container.current, "left", { duration: 0.6, ease: "power3" })
@@ -65,7 +78,7 @@ export default function Modal({ modal, images }) {
                 </div>
             </motion.div>
             <motion.div ref={cursor} variants={scaleAnimation} initial={"initial"} animate={active ? "open" : "closed"} className="cursor"></motion.div>
-            <motion.div ref={cursorLabel} variants={scaleAnimation} initial={"initial"} animate={active ? "open" : "closed"} className="cursor-label" onClick={() => router.push("/work")}>View</motion.div>
+            <motion.div ref={cursorLabel} variants={scaleAnimation} initial={"initial"} animate={active ? "open" : "closed"} className="cursor-label"><span className='crs' ref={crsRef} id='mods'>View</span></motion.div>
         </>
     )
 }
