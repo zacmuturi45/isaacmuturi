@@ -6,10 +6,19 @@ import "../css/index.css";
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
 import PreLoader from "@/components/preloader";
+import mailgo from "mailgo";
+
+const mailgoConfig = {
+  dark: true,
+};
 
 export default function App({ Component, pageProps, router }) {
   const [isLoading, setIsLoading] = useState(true);
   const [cr, setCr] = useState(false);
+
+  useEffect(() => {
+    mailgo(mailgoConfig);
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {

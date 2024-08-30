@@ -3,7 +3,7 @@
 import Transition from '@/components/Transition'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-import { c, flask, framer, gamebug, graphq, nextj, nextjs, postgres, sass, slideUp } from '../../../public/images/exports'
+import { c, flask, framer, gamebug, gb1, graphq, nextj, nextjs, postgres, sass, slideUp } from '../../../public/images/exports'
 import next from 'next'
 import Footer from '@/components/footer'
 import { motion } from 'framer-motion'
@@ -41,13 +41,13 @@ export default function Work() {
             </div>
             <div className='content-img-div'>
               <div id='gmb'>
-                <Image src={gamebug} width={100} height={100} quality={100} alt='gamebug-image' className='gamebug-image' />
+                <Image src={gb1} width={100} height={100} quality={100} unoptimized={true} alt='gamebug-image' className='gamebug-image' />
               </div>
               <div className='content-grid'>
-                <Image src={gamebug} width={100} height={100} alt='gamebug-image' className='gamebug-image' />
-                <Image src={gamebug} width={100} height={100} alt='gamebug-image' className='gamebug-image' />
-                <Image src={gamebug} width={100} height={100} alt='gamebug-image' className='gamebug-image' />
-                <Image src={gamebug} width={100} height={100} alt='gamebug-image' className='gamebug-image' />
+                <Image src={gamebug} width={100} height={100} alt='gamebug-image' unoptimized={true} className='gamebug-image' />
+                <Image src={gamebug} width={100} height={100} alt='gamebug-image' unoptimized={true} className='gamebug-image' />
+                <Image src={gamebug} width={100} height={100} alt='gamebug-image' unoptimized={true} className='gamebug-image' />
+                <Image src={gamebug} width={100} height={100} alt='gamebug-image' unoptimized={true} className='gamebug-image' />
               </div>
               <div className='demo'>
                 <div>Github repo</div>

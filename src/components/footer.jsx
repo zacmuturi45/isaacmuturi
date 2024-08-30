@@ -47,27 +47,7 @@ export default function Footer() {
         gsap.to(circ.current, { top: "-150%", width: "125%", duration: 0.4 })
         gsap.to(circ.current, { top: "100%", width: "100%", duration: 0, delay: 0.5 })
       }
-    
 
-
-    const navSocials = [
-        {
-            title: "Awwwards",
-            href: "/awwwards"
-        },
-        {
-            title: "Instagram",
-            href: "/instagram"
-        },
-        {
-            title: "Twitter",
-            href: "/twitter"
-        },
-        {
-            title: "LinkedIn",
-            href: "/linkedin"
-        }
-    ]
 
     return (
         <motion.div ref={footerRef} style={{ y: y }} className='footer-main' id='fm'>
@@ -87,8 +67,8 @@ export default function Footer() {
                 </div>
 
                 <div className='contact-info'>
-                    <div className='contact-info-one' id='one' onMouseEnter={() => mouseEnter(circle)} onMouseLeave={() => mouseLeave(circle)}><p>zacmuturi45@gmail.com</p><div className='circle' ref={circle}></div></div>
-                    <div className='contact-info-two' id='two' onMouseEnter={() => mouseEnter(circle2)} onMouseLeave={() => mouseLeave(circle2)}><p>+255747010039</p><div className='circle' ref={circle2}></div></div>
+                    <div className='contact-info-one' id='one' onMouseEnter={() => mouseEnter(circle)} onMouseLeave={() => mouseLeave(circle)} ><a href="mailto:isaactesha45@gmail.com" style={{textDecoration: "none", color: "white", zIndex: 999}}><p>isaactesha45@gmail.com</p></a><div className='circle' ref={circle}></div></div>
+                    <div className='contact-info-two' id='two' onMouseEnter={() => mouseEnter(circle2)} onMouseLeave={() => mouseLeave(circle2)} ><a href="callto:+255747010039" style={{textDecoration: "none", color: "white", zIndex: 999}}><p>+255747010039</p></a><div className='circle' ref={circle2}></div></div>
                 </div>
 
                 <div className='footer-links'>

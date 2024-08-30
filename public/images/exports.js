@@ -23,6 +23,14 @@ export { default as graphq } from './graphql.svg';
 export { default as greensock } from './gsap.svg';
 export { default as github } from './github.svg';
 export { default as chat } from './chat.svg';
+export { default as gb1 } from './gb1.png';
+export { default as gb2 } from './gb2.png';
+export { default as gb3 } from './gb3.png';
+export { default as gb4 } from './gb4.png';
+export { default as globe } from './globe.svg';
+export { default as theway } from './theway.jpg';
+export { default as book } from './book.svg';
+export { default as bomb } from './nuke.svg';
 
 export const localTime = () => {
     const now = new Date()

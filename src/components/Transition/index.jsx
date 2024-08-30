@@ -3,11 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { c, hero } from '../../../public/images/exports'
+import { c, cwhite, hero } from '../../../public/images/exports'
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import gsap from 'gsap'
 import Sidenav from '../sidenav'
+import GsapMagnetic from '../gsapMagnetic'
 
 export default function Transition({ children }) {
     const [isActive, setIsActive] = useState({ el1: false, el2: false, el3: false });
@@ -164,15 +165,17 @@ export default function Transition({ children }) {
                     <div>
                         {
                             showName && (
-                                <Link href="/" className='header-1'>
-                                    <div className='c'>
-                                        <Image src={c} width={18} height={18} alt='copyright-svg' className='copyright' />
-                                    </div>
-                                    <div className='nav-links-one'>
-                                        <p className={pathname === "/" || pathname === "/contact" ? "code" : "code path"}>Code by Isaac</p>
-                                        <p className={pathname === "/" || pathname === "/contact" ? "isaac" : "isaac path"}>Tesha</p>
-                                    </div>
-                                </Link>
+                                <GsapMagnetic>
+                                    <Link href="/" className='header-1'>
+                                        <div className='c'>
+                                            <Image src={pathname === "/contact" ? cwhite : c} width={18} height={18} alt='copyright-svg' className='copyright' />
+                                        </div>
+                                        <div className='nav-links-one'>
+                                            <p className={pathname === "/" || pathname === "/contact" ? "code" : "code path"}>Code by Isaac</p>
+                                            <p className={pathname === "/" || pathname === "/contact" ? "isaac" : "isaac path"}>Tesha</p>
+                                        </div>
+                                    </Link>
+                                </GsapMagnetic>
                             )
                         }
                     </div>

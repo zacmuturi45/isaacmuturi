@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 import Transition from '@/components/Transition'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { arrowblack, arrowdown, hero, sass, slideUp } from '../../../public/images/exports'
+import { arrowblack, arrowdown, globe, hero, sass, slideUp, theway } from '../../../public/images/exports'
 import gsap from 'gsap'
 import Image from 'next/image'
 import Footer from '@/components/footer'
@@ -35,7 +35,7 @@ export default function About() {
 
     const { scrollYProgress: arrowScroll } = useScroll({
         target: arrowRef,
-        offset: ["start end", "end end"]
+        offset: ["start end", "end start"]
     })
 
     const degrees = useTransform(arrowScroll, [0, 1], [90, 0])
@@ -57,13 +57,14 @@ export default function About() {
                                 })
                             }
                         </p>
+                        <div className='about-circle'><Image src={globe} width={50} height={50} alt='globe-image' className='globe' /></div>
                         <div className='about-line' ref={lineREf}></div>
                     </div>
 
                     <div className='about-content'>
-                        <div className='about-arrow' style={{ transform: `rotate(${degrees}deg)`}}>
+                        <motion.div className='about-arrow' style={{ top: degrees }}>
                             <Image src={arrowblack} height={35} width={45} alt='arrowdown' />
-                        </div>
+                        </motion.div>
 
                         <div className='about-content-text' >
                             <p>
@@ -84,9 +85,9 @@ export default function About() {
 
                         </div>
 
-                        <div className='about-content-image'>
-                            <Image src={hero} width={100} height={100} alt='hero-image' className='about-img' />
-                        </div>
+                        {/* <div className='about-content-image'>
+                            <Image src={theway} unoptimized={true} width={100} height={100} alt='hero-image' className='about-img' />
+                        </div> */}
                     </div>
 
                     <div className='about-content-details'>

@@ -681,8 +681,39 @@ body {
 
 .text-div {
   position: relative;
-  padding-top: 120px;
+  padding-top: 30px;
   padding-bottom: 120px;
+}
+
+.about-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  right: 100px;
+  bottom: -115px;
+  background-color: blue;
+  z-index: 9;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe {
+  width: 100px;
+  height: 100px;
+  animation: rotateX 10s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotateX {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .text-div p {
@@ -721,7 +752,6 @@ body {
 }
 
 .about-content-image {
-  display: none;
   width: 65%;
   height: 100vh;
 }
@@ -735,7 +765,6 @@ body {
   position: absolute;
   top: 0;
   left: -150px;
-  border: 2px solid red;
 }
 
 .about-content-details {
