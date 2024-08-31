@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "locomotive-scroll": "^4.1.4",
     "mailgo": "^0.12.2",
     "next": "14.2.5",

@@ -172,7 +172,7 @@ export default function Transition({ children }) {
                                         </div>
                                         <div className='nav-links-one'>
                                             <p className={pathname === "/" || pathname === "/contact" ? "code" : "code path"}>Code by Isaac</p>
-                                            <p className={pathname === "/" || pathname === "/contact" ? "isaac" : "isaac path"}>Tesha</p>
+                                            <p className={pathname === "/" || pathname === "/contact" ? "isaac" : "isaac path"}>Muturi</p>
                                         </div>
                                     </Link>
                                 </GsapMagnetic>

@@ -27,10 +27,27 @@ export { default as gb1 } from './gb1.png';
 export { default as gb2 } from './gb2.png';
 export { default as gb3 } from './gb3.png';
 export { default as gb4 } from './gb4.png';
+export { default as gb5 } from './gb5.png';
+export { default as gb6 } from './gb6.png';
+export { default as gb7 } from './gb7.png';
+export { default as gb8 } from './gb8.png';
+export { default as gb9 } from './gb9.png';
+export { default as gb10 } from './gb10.png';
+export { default as gb11 } from './gb11.png';
 export { default as globe } from './globe.svg';
 export { default as theway } from './theway.jpg';
-export { default as book } from './book.svg';
-export { default as bomb } from './nuke.svg';
+export { default as wand } from './wand.svg';
+export { default as front } from './front.svg';
+export { default as back } from './back.svg';
+export { default as career } from './career.svg';
+export { default as authenticate } from './authenticate.svg';
+export { default as library } from './library.svg';
+export { default as responsive } from './responsive.svg';
+export { default as search } from './search.svg';
+export { default as alembic } from './alembic.svg';
+export { default as apollo } from './apollo.svg';
+export { default as wave } from './wave.svg';
+
 
 export const localTime = () => {
     const now = new Date()

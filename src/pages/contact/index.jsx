@@ -4,8 +4,8 @@ import GsapMagnetic from '@/components/gsapMagnetic';
 import Transition from '@/components/Transition'
 import gsap from 'gsap';
 import Image from 'next/image';
-import React, { useRef, useState } from 'react'
-import { arrowdown, chat, github, hero, insta, js, linkedin, whatsapp } from '../../../public/images/exports';
+import React, { useEffect, useRef, useState } from 'react'
+import { arrowdown, chat, github, hero, insta, js, linkedin, localTime, whatsapp } from '../../../public/images/exports';
 import Loader from '@/components/loader';
 
 export default function Blog() {
@@ -17,6 +17,21 @@ export default function Blog() {
     const [status, setStatus] = useState({ successful: false, info: "Thank you for your feedbac!" });
     const [loading, setLoading] = useState(false);
     const blue = useRef(null)
+    const [time, setTime] = useState("")
+
+    useEffect(() => {
+        setTime(localTime())
+        updateTime()
+    }, [time])
+
+    const updateTime = () => {
+        const now = new Date();
+        const getSeconds = now.getSeconds()
+        const secondsDifference = 1000*(60 - getSeconds)
+        setInterval(() => {
+            setTime(localTime())
+        }, secondsDifference);
+    }
 
     const mouseEnter = () => {
         gsap.to(blue.current, { top: "-25%", width: "150%", duration: 0.4 })
@@ -233,7 +248,7 @@ export default function Blog() {
                         </div>
                         <div>
                             <h4>Local Time</h4>
-                            <p>11:45 AM GMT+2</p>
+                            <p>{time}</p>
                         </div>
                     </div>
 

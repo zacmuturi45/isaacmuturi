@@ -7,6 +7,7 @@ import "@/styles/globals.css";
 import { useEffect, useState } from "react";
 import PreLoader from "@/components/preloader";
 import mailgo from "mailgo";
+import LenisWrapper from "@/components/LenisWrapper";
 
 const mailgoConfig = {
   dark: true,
@@ -40,9 +41,11 @@ export default function App({ Component, pageProps, router }) {
       <AnimatePresence>
         {isLoading && <PreLoader />}
       </AnimatePresence>
-      <AnimatePresence mode="wait">
-        {cr && <Component key={router.route} {...pageProps} />}
-      </AnimatePresence>
+      <LenisWrapper>
+        <AnimatePresence mode="wait">
+          {cr && <Component key={router.route} {...pageProps} />}
+        </AnimatePresence>
+      </LenisWrapper>
     </div>
   );
 }

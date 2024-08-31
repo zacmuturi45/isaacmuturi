@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Transition from "@/components/Transition";
-import { arrowdown, docker, flask, gamebug, github, graphq, greensock, hero, insta, js, linkedin, nextj, postgres, python, react, sass, slideUp, whatsapp } from "../../public/images/exports";
+import { arrowdown, docker, flask, gamebug, gb1, github, graphq, greensock, hero, insta, js, linkedin, nextj, postgres, python, react, sass, slideUp, whatsapp } from "../../public/images/exports";
 import { useEffect, useRef, useState } from "react";
 import { color, inView, motion, useInView, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
@@ -35,7 +35,7 @@ export default function Home() {
   const data = [
     {
       title: "Gamebug",
-      src: gamebug,
+      src: gb1,
       color: "lightgray"
     }
   ]
@@ -98,7 +98,7 @@ export default function Home() {
 
             <div className="body-isaac">
               <div className="isc"><h1>Isaac</h1><div className="isc-mask"><div className="sc"></div></div></div>
-              <div className="tsh"><h1>Gichuhi</h1><div className="tsh-mask"></div><div className="sht"></div></div>
+              <div className="tsh"><h1>Muturi</h1><div className="tsh-mask"></div><div className="sht"></div></div>
               <div className="sp"></div>
             </div>
 
