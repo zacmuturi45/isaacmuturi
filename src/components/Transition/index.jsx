@@ -13,7 +13,7 @@ import GsapMagnetic from '../gsapMagnetic'
 export default function Transition({ children }) {
     const [isActive, setIsActive] = useState({ el1: false, el2: false, el3: false });
     const [burgerActive, setBurgerActive] = useState(false);
-    const burgerRef = useRef(null);
+    // const burgerRef = useRef(null);
     const ov = useRef(null);
     const [tp, setTp] = useState(0);
     const [showBurger, setShowBurger] = useState(false);
@@ -29,34 +29,34 @@ export default function Transition({ children }) {
         }, 650);
     }, [pathname])
 
-    useEffect(() => {
-        const xTo = gsap.quickTo(burgerRef.current, "x", { duration: 1.2, ease: "elastic.out(1, 0.3)" })
-        const yTo = gsap.quickTo(burgerRef.current, "y", { duration: 1.2, ease: "elastic.out(1, 0.3)" })
+    // useEffect(() => {
+    //     const xTo = gsap.quickTo(burgerRef.current, "x", { duration: 1.2, ease: "elastic.out(1, 0.3)" })
+    //     const yTo = gsap.quickTo(burgerRef.current, "y", { duration: 1.2, ease: "elastic.out(1, 0.3)" })
 
-        const mouseMove = (e) => {
-            const { clientX, clientY } = e;
-            const { width, height, left, top } = burgerRef.current.getBoundingClientRect();
-            const x = clientX - (left + width / 2);
-            const y = clientY - (top + height / 2);
-            xTo(x)
-            yTo(y)
-        }
+    //     const mouseMove = (e) => {
+    //         const { clientX, clientY } = e;
+    //         const { width, height, left, top } = burgerRef.current.getBoundingClientRect();
+    //         const x = clientX - (left + width / 2);
+    //         const y = clientY - (top + height / 2);
+    //         xTo(x)
+    //         yTo(y)
+    //     }
 
-        const mouseLeft = (e) => {
-            xTo(0)
-            yTo(0)
-        }
+    //     const mouseLeft = (e) => {
+    //         xTo(0)
+    //         yTo(0)
+    //     }
 
-        burgerRef.current.addEventListener("mousemove", mouseMove)
-        burgerRef.current.addEventListener("mouseleave", mouseLeft)
+    //     burgerRef.current.addEventListener("mousemove", mouseMove)
+    //     burgerRef.current.addEventListener("mouseleave", mouseLeft)
 
-        return () => {
-            if (burgerRef.current) {
-                burgerRef.current.removeEventListener("mousemove", mouseMove)
-                burgerRef.current.removeEventListener("mouseleave", mouseLeft)
-            }
-        }
-    }, [])
+    //     return () => {
+    //         if (burgerRef.current) {
+    //             burgerRef.current.removeEventListener("mousemove", mouseMove)
+    //             burgerRef.current.removeEventListener("mouseleave", mouseLeft)
+    //         }
+    //     }
+    // }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -229,7 +229,7 @@ export default function Transition({ children }) {
                     </div>
 
 
-                    <div ref={burgerRef} onClick={() => setBurgerActive(!burgerActive)} className={showBurger ? "burger-container showbg" : "burger-container hidebg"} onMouseEnter={(e) => mouseEnter(e)} onMouseLeave={(e) => mouseLeave(e)}>
+                    <div onClick={() => setBurgerActive(!burgerActive)} className={showBurger ? "burger-container showbg" : "burger-container hidebg"} onMouseEnter={(e) => mouseEnter(e)} onMouseLeave={(e) => mouseLeave(e)}>
                         <div className={burgerActive ? "burger burger-active" : "burger"}></div>
                         <div className='ov' ref={ov}></div>
                     </div>

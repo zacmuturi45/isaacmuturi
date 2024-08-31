@@ -97,7 +97,7 @@ export default function Blog() {
                 {
                     status.successful ? (
                         <div className='feedback'>
-                            <Image src={chat} width={50} height={50} className='chat-image' />
+                            <Image src={chat} width={50} height={50} className='chat-image' alt='chat-svg' />
                             <p>{status.info}</p>
                         </div>
                     ) : (
@@ -105,14 +105,14 @@ export default function Blog() {
                             <div className='contact-div1'>
                                 <div className='hire-me'>
                                     <h1>Hire me/Feedback</h1>
-                                    <p>Why does morning sunlight give you Vitamin D and noon sunlight, sunburn? Whether you're hiring or passing by, your feedback will go a long way in helping me on my nascent developer journey. Please take a few minutes to write your thoughts, tips or advice. Cheers!</p>
+                                    <p>Why does morning sunlight give you Vitamin D and noon sunlight, sunburn? Whether you&apos;re hiring or passing by, your feedback will go a long way in helping me on my nascent developer journey. Please take a few minutes to write your thoughts, tips or advice. Cheers!</p>
                                 </div>
 
                                 <div className='form-div'>
 
                                     <form onSubmit={handleSubmit}>
                                         <div>
-                                            <label><span>01</span>What's your name?</label>
+                                            <label><span>01</span>What&apos;s your name?</label>
                                             <input
                                                 name='name'
                                                 type="text"
@@ -124,7 +124,7 @@ export default function Blog() {
                                         </div>
 
                                         <div>
-                                            <label><span>02</span>What's your email?</label>
+                                            <label><span>02</span>What&apos;s your email?</label>
                                             <input
                                                 name='email'
                                                 type="text"
@@ -136,7 +136,7 @@ export default function Blog() {
                                         </div>
 
                                         <div>
-                                            <label><span>03</span>What's the name of your organization?</label>
+                                            <label><span>03</span>What&apos;s the name of your organization?</label>
                                             <input
                                                 name='organization'
                                                 type="text"

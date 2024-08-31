@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { slide } from '../../public/images/exports'
 import { usePathname } from 'next/navigation'
 
-export default function NavLink({ data }) {
+export default function NavLink({ data, key }) {
     const pathname = usePathname();
 
     return (
@@ -17,6 +17,7 @@ export default function NavLink({ data }) {
             exit="exit"
             initial="initial"
             className={pathname === data.href ? "slide-links lines" : "slide-links"}
+            key={key}
         >
             <Link href={data.href}>
                 {data.title}

@@ -41,7 +41,7 @@ export default function Sidenav() {
                         <div className='underline'></div>
                         {
                             navItems.map((item, index) => {
-                                return <NavLink data={{ ...item, index }} />
+                                return <NavLink data={{ ...item, index }} key={index} />
                             })
                         }
                     </div>

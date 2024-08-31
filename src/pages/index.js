@@ -109,7 +109,7 @@ export default function Home() {
                   <>
                     {
                       "Full Stack".split(" ").map((word, index) => {
-                        return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
+                        return <p className="mask" key={index}><motion.span custom={index} key={index} variants={slideUp}
                           initial="initial" animate="open">{word}</motion.span></p>
                       })
                     }
@@ -118,7 +118,7 @@ export default function Home() {
                   <>
                     {
                       "Web".split(" ").map((word, index) => {
-                        return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
+                        return <p className="mask" key={index}><motion.span custom={index} key={index} variants={slideUp}
                           initial="initial" animate="open">{word}</motion.span></p>
                       })
                     }
@@ -127,7 +127,7 @@ export default function Home() {
                   <>
                     {
                       "Developer".split(" ").map((word, index) => {
-                        return <p className="mask"><motion.span custom={index} key={index} variants={slideUp}
+                        return <p className="mask" key={index}><motion.span custom={index} key={index} variants={slideUp}
                           initial="initial" animate="open">{word}</motion.span></p>
                       })
                     }
@@ -147,7 +147,7 @@ export default function Home() {
                 <p>
                   {
                     description.split(" ").map((word, index) => {
-                      return <span className="mask"><motion.span custom={index} key={index} variants={slideUp}
+                      return <span className="mask" key={index}><motion.span custom={index} key={index} variants={slideUp}
                         initial="initial" animate={isInView ? "open" : "closed"}
                       >{word}</motion.span></span>
                     })
@@ -182,20 +182,20 @@ export default function Home() {
           <div className="mobile-stack">
             <div className="mdiv1">
               <h2>Frontend</h2>
-              <div><Image src={js} width={25} height={25} /><p>JavaScript</p></div>
-              <div><Image src={react} width={25} height={25} /><p>React.js</p></div>
-              <div><Image src={nextj} width={25} height={25} /><p>Next.js</p></div>
-              <div><Image src={sass} width={25} height={25} /><p>Sass</p></div>
-              <div><Image src={greensock} width={25} height={25} /><p>Gsap</p></div>
+              <div><Image alt="svg-image" src={js} width={25} height={25} /><p>JavaScript</p></div>
+              <div><Image alt="svg-image" src={react} width={25} height={25} /><p>React.js</p></div>
+              <div><Image alt="svg-image" src={nextj} width={25} height={25} /><p>Next.js</p></div>
+              <div><Image alt="svg-image" src={sass} width={25} height={25} /><p>Sass</p></div>
+              <div><Image alt="svg-image" src={greensock} width={25} height={25} /><p>Gsap</p></div>
             </div>
 
             <div className="mdiv2">
               <h2>Backend</h2>
-              <div><Image src={python} width={25} height={25} /><p>Python</p></div>
-              <div><Image src={flask} width={25} height={25} /><p>Flask</p></div>
-              <div><Image src={graphq} width={25} height={25} /><p>GraphQL</p></div>
-              <div><Image src={docker} width={25} height={25} /><p>Docker</p></div>
-              <div><Image src={postgres} width={25} height={25} /><p>Postgres</p></div>
+              <div><Image alt="svg-image" src={python} width={25} height={25} /><p>Python</p></div>
+              <div><Image alt="svg-image" src={flask} width={25} height={25} /><p>Flask</p></div>
+              <div><Image alt="svg-image" src={graphq} width={25} height={25} /><p>GraphQL</p></div>
+              <div><Image alt="svg-image" src={docker} width={25} height={25} /><p>Docker</p></div>
+              <div><Image alt="svg-image" src={postgres} width={25} height={25} /><p>Postgres</p></div>
             </div>
           </div>
           <div className="sliders" ref={containerRef}>

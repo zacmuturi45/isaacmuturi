@@ -57,7 +57,7 @@ export default function Footer() {
                         <div className="image-container">
                             <Image src={hero} alt='mario' className='image' />
                         </div>
-                        <h1>Let's work</h1>
+                        <h1>Let&apos;s work</h1>
                     </div>
                     <h1 className='together'>together</h1>
                     <GsapMagnetic>
