@@ -225,7 +225,7 @@ export default function Blog() {
                                     </GsapMagnetic>
 
                                     <GsapMagnetic>
-                                        <a href="https://www.linkedin.com/in/isaac-tesha-997a0514b/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/isaac-muturi-997a0514b/" target="_blank" rel="noopener noreferrer">
                                             <div>
                                                 <Image src={linkedin} width={20} height={20} alt="instagram" />
                                                 <p style={{ color: "white" }}>Linkedin</p>
@@ -258,7 +258,7 @@ export default function Blog() {
                             <a href="https://www.instagram.com/muturizac/?hl=en" target="_blank" rel="noopener noreferrer"><GsapMagnetic><p>Instagram</p></GsapMagnetic></a>
                             <a href="https://github.com/zacmuturi45" target="_blank" rel="noopener noreferrer"><GsapMagnetic><p>Github</p></GsapMagnetic></a>
                             <a href="https://wa.me/255747010039" target="_blank" rel="noopener noreferrer"><GsapMagnetic><p>Whatsapp</p></GsapMagnetic></a>
-                            <a href="https://www.linkedin.com/in/isaac-tesha-997a0514b/" target="_blank" rel="noopener noreferrer"><GsapMagnetic><p>Linkedin</p></GsapMagnetic></a>
+                            <a href="https://www.linkedin.com/in/isaac-muturi-997a0514b/" target="_blank" rel="noopener noreferrer"><GsapMagnetic><p>Linkedin</p></GsapMagnetic></a>
 
                         </div>
                     </div>

@@ -237,7 +237,7 @@ export default function Home() {
             <a href="https://www.instagram.com/muturizac/?hl=en" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={insta} width={25} height={25} alt="whatsapp" /></GsapMagnetic></a>
             <a href="https://github.com/zacmuturi45" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={github} width={27} height={27} alt="instagram" /></GsapMagnetic></a>
             <a href="https://wa.me/255747010039" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={whatsapp} width={25} height={25} alt="whatsapp" /></GsapMagnetic></a>
-            <a href="https://www.linkedin.com/in/isaac-tesha-997a0514b/" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={linkedin} width={25} height={25} alt="linkedin" /></GsapMagnetic></a>
+            <a href="https://www.linkedin.com/in/isaac-muturi-997a0514b/" target="_blank" rel="noopener noreferrer"><GsapMagnetic><Image src={linkedin} width={25} height={25} alt="linkedin" /></GsapMagnetic></a>
           </div>
 
 
